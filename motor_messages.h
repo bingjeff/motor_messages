@@ -161,12 +161,12 @@ typedef struct {
     float kv;                           // motor kv Vs/rad
     float bias;                         // bias rad
     float frequency;                    // frequency Hz
-} StepperTuningCommand;                       // open loop mode, may skip in position and overcurrent easily
+} StepperTuningCommand;                 // open loop mode, may skip in position and overcurrent easily
 
 typedef struct {
     float voltage;                      // motor voltage V line-line
     float velocity;                     // motor velocity rad/s
-} StepperVelocityCommand;                     // open loop mode, may skip in position and overcurrent easily
+} StepperVelocityCommand;               // open loop mode, may skip in position and overcurrent easily
 
 typedef struct {
     uint32_t host_timestamp;            // Value from host
@@ -199,8 +199,7 @@ typedef struct {
         StepperTuningCommand stepper_tuning;
         StepperVelocityCommand stepper_velocity;
     };
-                                            // 11*4 = 44 bytes
-} MotorCommand;
+} MotorCommand;                                  // 11*4 = 44 bytes
 
 #ifdef __cplusplus
 }  // namespace obot
